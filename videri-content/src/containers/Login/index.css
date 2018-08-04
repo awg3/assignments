@@ -1,0 +1,47 @@
+@media all and (min-width: 480px) {
+  .Login {
+    height: 100%;
+    background: url("../../images/login-background-min.png") no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .Login .box {
+      background-color: white;
+      width: calc(100% - 15em);
+      max-width: 700px;
+      height: calc(100% - 35em);
+      padding: 3em 10em;
+      box-shadow: 0px 0px 10px 0px #000000; }
+    .Login .title, .Login .form {
+      width: 100%; }
+    .Login .title {
+      text-align: left; }
+      .Login .title .appName {
+        font-size: 2.1em;
+        font-weight: 300;
+        letter-spacing: 0.1em;
+        margin-right: 0.3em; }
+      .Login .title .subTitle {
+        text-transform: uppercase;
+        font-size: 0.9em;
+        font-weight: 600;
+        letter-spacing: 0.05em; }
+    .Login .formName {
+      font-weight: bold;
+      color: black;
+      margin: 2em 0;
+      text-transform: uppercase; }
+    .Login form .submit {
+      float: right;
+      max-width: 10em;
+      text-transform: uppercase;
+      font-weight: bold;
+      color: white;
+      background-color: #29C15F; }
+    .Login form .form-control {
+      font-weight: bold;
+      color: grey; }
+    .Login form .form-control, .Login form .submit {
+      border-radius: 0;
+      font-size: 0.9em; } }
