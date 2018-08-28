@@ -1,0 +1,35 @@
+@import "./_globals";
+@import "./components/ActionButton/index.scss";
+@import url(https://fonts.googleapis.com/css?family=Georgia);
+
+body {
+    background-color: $bg-dark;
+    color: white;
+    font-family: Georgia;
+    display: flex;
+    justify-content: center;
+    font-weight: 400;
+}
+
+.App {
+    height: 100%;
+    max-width: 40em;
+    width: 100%;
+
+    .gameOver {
+        max-width: 11em;
+        text-align: center;
+        background-color: black;
+        color: white;
+        margin: 0 auto;
+        padding: 1em 0
+    }
+
+    .selected {
+        background-color: black;
+        padding: 1em;
+        border: 1px solid $pastel-red;
+        margin: 1em auto 0 auto;
+        width: 5em;
+    }
+}

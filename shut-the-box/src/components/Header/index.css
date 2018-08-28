@@ -1,0 +1,27 @@
+@import url(https://fonts.googleapis.com/css?family=Georgia);
+.Header {
+  display: flex;
+  flex-direction: column;
+  margin: 0 2em; }
+  .Header h1 {
+    font-size: 3em;
+    text-align: center; }
+  .Header .rules {
+    font-size: 1.2em; }
+  .Header .rulesButton, .Header .total {
+    background-color: black;
+    border: 1px solid cyan;
+    color: white;
+    font-size: 1em;
+    padding: 0.75em;
+    text-align: justify; }
+    .Header .rulesButton:hover, .Header .total:hover {
+      background-color: #008b8b;
+      cursor: pointer; }
+  .Header .rulesButton {
+    width: 9em; }
+  .Header .total {
+    cursor: pointer;
+    margin-top: 1em;
+    max-width: 8em;
+    width: 100%; }

@@ -1,0 +1,39 @@
+@import "../../globals";
+
+.actionButton {
+    background-color: black;
+    border: 1px solid cyan;
+    border-radius: 5px;
+    color: white;
+    font-size: 1em;
+    height: 3em;
+    padding: 1em;
+
+    &:hover {
+        &:not(.disabled) {
+            background-color: $dark-cyan;
+            cursor: pointer;
+        }
+        &.disabled {
+            background-color: $pastel-red;
+            cursor: not-allowed;
+        }
+    }
+
+    &.start {
+        margin-right: 0.75em;
+    }
+
+    &.reset {
+        margin-left: 0.75em;
+    }
+
+    &.disabled {
+        cursor: unset;
+        background-color: $bg-dark;
+    }
+
+    &.highlight {
+        border: 1px solid $pastel-red;
+    }
+}

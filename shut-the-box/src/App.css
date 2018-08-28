@@ -1,0 +1,52 @@
+@import url(https://fonts.googleapis.com/css?family=Georgia);
+@import url(https://fonts.googleapis.com/css?family=Georgia);
+@import url(https://fonts.googleapis.com/css?family=Georgia);
+.actionButton {
+  background-color: black;
+  border: 1px solid cyan;
+  border-radius: 5px;
+  color: white;
+  font-size: 1em;
+  height: 3em;
+  padding: 1em; }
+  .actionButton:hover:not(.disabled) {
+    background-color: #008b8b;
+    cursor: pointer; }
+  .actionButton:hover.disabled {
+    background-color: #FF3030;
+    cursor: not-allowed; }
+  .actionButton.start {
+    margin-right: 0.75em; }
+  .actionButton.reset {
+    margin-left: 0.75em; }
+  .actionButton.disabled {
+    cursor: unset;
+    background-color: #333; }
+  .actionButton.highlight {
+    border: 1px solid #FF3030; }
+
+body {
+  background-color: #333;
+  color: white;
+  font-family: Georgia;
+  display: flex;
+  justify-content: center;
+  font-weight: 400; }
+
+.App {
+  height: 100%;
+  max-width: 40em;
+  width: 100%; }
+  .App .gameOver {
+    max-width: 11em;
+    text-align: center;
+    background-color: black;
+    color: white;
+    margin: 0 auto;
+    padding: 1em 0; }
+  .App .selected {
+    background-color: black;
+    padding: 1em;
+    border: 1px solid #FF3030;
+    margin: 1em auto 0 auto;
+    width: 5em; }

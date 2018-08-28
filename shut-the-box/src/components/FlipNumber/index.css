@@ -1,0 +1,26 @@
+@import url(https://fonts.googleapis.com/css?family=Georgia);
+.number {
+  width: 3em;
+  height: 5em;
+  line-height: 5em;
+  border: 1px solid cyan;
+  text-align: center;
+  background-color: black;
+  margin: 0.5em; }
+  .number:hover:not(.disabled) {
+    cursor: pointer;
+    background-color: #008b8b; }
+  .number:hover.disabled:not(.flipped) {
+    border-color: #FF3030;
+    cursor: not-allowed; }
+  .number.flipped {
+    background-color: #333;
+    color: #333;
+    transition: 0.6s;
+    transform: scaleX(-1);
+    transform-style: preserve-3d; }
+    .number.flipped .num {
+      opacity: 0; }
+    .number.flipped:hover {
+      cursor: unset;
+      background-color: #333; }

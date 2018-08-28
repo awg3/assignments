@@ -1,0 +1,42 @@
+@import "../../globals";
+
+.number {
+    width: 3em;
+    height: 5em;
+    line-height: 5em;
+    border: 1px solid cyan;
+    text-align: center;
+    background-color: black;
+    margin: 0.5em;
+
+    &:hover {
+        &:not(.disabled) {
+            cursor: pointer;
+            background-color: $dark-cyan;
+        }
+
+        &.disabled {
+            &:not(.flipped) {
+                border-color: $pastel-red;
+                cursor: not-allowed;
+            }
+        }
+    }
+
+    &.flipped {
+        background-color: $bg-dark;
+        color: $bg-dark;
+        transition: 0.6s;
+        transform: scaleX(-1);
+        transform-style: preserve-3d;
+
+        .num {
+            opacity: 0;
+        }
+
+        &:hover {
+            cursor: unset;
+            background-color: $bg-dark;
+        }
+    }
+}

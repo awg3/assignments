@@ -1,0 +1,45 @@
+@import "../../globals";
+
+@mixin displayBox {
+    background-color: black;
+    border: 1px solid cyan;
+    color: white;
+    font-size: 1em;
+    padding: 0.75em;
+    text-align: justify;
+
+    &:hover {
+        background-color: $dark-cyan;
+        cursor: pointer;
+    }
+}
+
+.Header {
+    display: flex;
+    flex-direction: column;
+    margin: 0 2em;
+
+    h1 {
+        font-size: 3em;
+        text-align: center;
+    }
+
+    .rules {
+        font-size: 1.2em;
+    }
+
+    .rulesButton, .total {
+        @include displayBox;
+    }
+
+    .rulesButton {
+        width: 9em;
+    }
+    
+    .total {
+        cursor: pointer;
+        margin-top: 1em;
+        max-width: 8em;
+        width: 100%;
+    }
+}
