@@ -1,2 +1,2 @@
-# assignments
-Coding assignments and general brain dump
+# brain dump
+Projects that I picked up and wish to share.
