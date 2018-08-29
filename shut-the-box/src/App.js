@@ -134,7 +134,7 @@ class ShutTheBox extends React.Component {
         } = this.state;
 
         return (
-            <div>
+            <div className="appContainer">
                 <Header
                     flippedNums={flippedNums}
                     gameName={this.gameName}

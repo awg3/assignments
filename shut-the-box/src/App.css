@@ -1,6 +1,4 @@
 @import url(https://fonts.googleapis.com/css?family=Georgia);
-@import url(https://fonts.googleapis.com/css?family=Georgia);
-@import url(https://fonts.googleapis.com/css?family=Georgia);
 .actionButton {
   background-color: black;
   border: 1px solid cyan;
@@ -24,6 +22,11 @@
     background-color: #333; }
   .actionButton.highlight {
     border: 1px solid #FF3030; }
+  @media (max-width: 500px) {
+    .actionButton.start {
+      margin-right: 0.5em; }
+    .actionButton.reset {
+      margin-left: 0.5em; } }
 
 body {
   background-color: #333;
@@ -35,18 +38,22 @@ body {
 
 .App {
   height: 100%;
-  max-width: 40em;
-  width: 100%; }
-  .App .gameOver {
-    max-width: 11em;
-    text-align: center;
-    background-color: black;
-    color: white;
-    margin: 0 auto;
-    padding: 1em 0; }
-  .App .selected {
-    background-color: black;
-    padding: 1em;
-    border: 1px solid #FF3030;
-    margin: 1em auto 0 auto;
-    width: 5em; }
+  width: 100vw; }
+  .App .appContainer {
+    margin: 0 2em; }
+    .App .appContainer .gameOver {
+      max-width: 11em;
+      text-align: center;
+      background-color: black;
+      color: white;
+      margin: 0 auto;
+      padding: 1em 0; }
+    .App .appContainer .selected {
+      background-color: black;
+      padding: 1em;
+      border: 1px solid #FF3030;
+      margin: 1em auto 0 auto;
+      width: 5em; }
+    @media (max-width: 500px) {
+      .App .appContainer {
+        margin: 0 0.5em; } }

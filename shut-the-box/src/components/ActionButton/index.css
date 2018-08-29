@@ -1,4 +1,3 @@
-@import url(https://fonts.googleapis.com/css?family=Georgia);
 .actionButton {
   background-color: black;
   border: 1px solid cyan;
@@ -22,3 +21,8 @@
     background-color: #333; }
   .actionButton.highlight {
     border: 1px solid #FF3030; }
+  @media (max-width: 500px) {
+    .actionButton.start {
+      margin-right: 0.5em; }
+    .actionButton.reset {
+      margin-left: 0.5em; } }

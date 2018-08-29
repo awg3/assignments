@@ -36,4 +36,14 @@
     &.highlight {
         border: 1px solid $pastel-red;
     }
+
+    @media (max-width: $smallSize) {
+        &.start {
+            margin-right: 0.5em;
+        }
+    
+        &.reset {
+            margin-left: 0.5em;
+        }
+    }
 }

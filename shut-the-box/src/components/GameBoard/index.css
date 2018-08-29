@@ -1,4 +1,3 @@
-@import url(https://fonts.googleapis.com/css?family=Georgia);
 .GameBoard {
   align-items: center;
   background-color: black;
@@ -6,4 +5,6 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin: 1em 2em; }
+  margin: 1em auto;
+  width: 100%;
+  max-width: 35em; }

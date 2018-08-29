@@ -1,13 +1,17 @@
-@import url(https://fonts.googleapis.com/css?family=Georgia);
 .Header {
   display: flex;
   flex-direction: column;
-  margin: 0 2em; }
+  margin: 1em auto;
+  width: 100%;
+  max-width: 35em; }
   .Header h1 {
     font-size: 3em;
     text-align: center; }
   .Header .rules {
     font-size: 1.2em; }
+    @media (max-width: 500px) {
+      .Header .rules {
+        font-size: 1em; } }
   .Header .rulesButton, .Header .total {
     background-color: black;
     border: 1px solid cyan;

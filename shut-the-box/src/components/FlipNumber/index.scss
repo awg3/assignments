@@ -39,4 +39,10 @@
             background-color: $bg-dark;
         }
     }
+
+    @media (max-width: $smallSize) {
+        height: 4em;
+        line-height: 4em;
+        margin: 0.2em;
+    }
 }

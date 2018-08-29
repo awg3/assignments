@@ -13,23 +13,30 @@ body {
 
 .App {
     height: 100%;
-    max-width: 40em;
-    width: 100%;
+    width: 100vw;
 
-    .gameOver {
-        max-width: 11em;
-        text-align: center;
-        background-color: black;
-        color: white;
-        margin: 0 auto;
-        padding: 1em 0
-    }
+    .appContainer {
+        margin: 0 2em;
 
-    .selected {
-        background-color: black;
-        padding: 1em;
-        border: 1px solid $pastel-red;
-        margin: 1em auto 0 auto;
-        width: 5em;
+        .gameOver {
+            max-width: 11em;
+            text-align: center;
+            background-color: black;
+            color: white;
+            margin: 0 auto;
+            padding: 1em 0
+        }
+
+        .selected {
+            background-color: black;
+            padding: 1em;
+            border: 1px solid $pastel-red;
+            margin: 1em auto 0 auto;
+            width: 5em;
+        }
+
+        @media (max-width: $smallSize) {
+            margin: 0 0.5em;
+        }
     }
 }

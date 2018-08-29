@@ -7,14 +7,16 @@
   width: 100%; }
   .Dices .container .dice {
     background-color: white;
-    color: black;
-    width: 2em;
-    height: 2em;
-    line-height: 2em;
     border-radius: 10px;
     border-color: white;
-    text-align: center;
-    vertical-align: center;
-    margin-left: 0.25em;
+    color: black;
     float: left;
-    font-size: 2em; }
+    font-size: 2em;
+    height: 2em;
+    line-height: 2em;
+    margin-left: 0.25em;
+    text-align: center;
+    width: 2em; }
+  @media (max-width: 500px) {
+    .Dices .container .dice {
+      font-size: 1.5em; } }
