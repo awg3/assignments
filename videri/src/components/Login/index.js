@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { pixabayAPIKey } from "constants";
+import { pixabayAPIKey } from "../../constants";
 import "./index.css";
 
 export default class Login extends Component {
@@ -14,6 +14,11 @@ export default class Login extends Component {
 
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+    }
+
+    componentWillMount() {
+        // TODO: remove after wiring up login redirect
+        localStorage.clear();
     }
 
     fetchMedia = (url, category) => {
@@ -54,6 +59,7 @@ export default class Login extends Component {
     handleSubmit = (event) => {
         event.preventDefault();
 
+        const { history } = this.props;
         const { email, password } = this.state;
 
         this.setState({ errors: {} });
@@ -61,7 +67,7 @@ export default class Login extends Component {
         if (this.validateForm()) {
             // Mocking API call delay
             setTimeout(() => {
-                const categories = ["elephant", "conch", "champagne", "puzzle"];
+                const categories = ["elephant", "tennis", "champagne", "magic"];
 
                 // Using this in place of redux for now.
                 localStorage.setItem("user", JSON.stringify({ email, password }));
@@ -69,7 +75,7 @@ export default class Login extends Component {
                 this.getImages(categories);
 
                 // Moving to Home on valid submit.
-                this.props.history.push("/home");
+                history.push("/");
             }, 1000);
         }
     }
