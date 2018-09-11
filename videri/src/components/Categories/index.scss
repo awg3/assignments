@@ -1,0 +1,53 @@
+@import "../../globals";
+
+// variables
+$height: $categories_height;
+
+.Categories {
+    background-color: white;
+    border-bottom: 1px solid $gray;
+    display: flex;
+    height: $height;
+    position: relative;
+    padding: 1.5em 1em;
+
+    .category {
+        margin-left: 1em;
+
+        &:first-of-type {
+            padding-left: 0;
+        }
+
+        &__image {
+            cursor: pointer;
+            display: block;
+            margin: 0 auto;
+            margin-top: 0.5em;
+            text-align: center;
+            width: 50%;
+        }
+
+        &__name {
+            color: $gray_medium;
+            display: block;
+            font-weight: 600;
+            font-size: 0.9em;
+            margin: 0.5em auto 0 auto;
+            text-align: center;
+
+            &.selected {
+                color: $blue;
+            }
+        }
+    }
+
+    .newCategory {
+        color: $blue;
+        cursor: pointer;
+        font-size: 0.8em;
+        font-weight: 800;
+        position: absolute;
+        right: 1em;
+        top: 0.5em;
+    }
+}

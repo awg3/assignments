@@ -1,0 +1,98 @@
+@import "../../globals";
+
+// variables
+$height: $navbar_height;
+
+.NavBar {
+    background-color: white;
+    border-bottom: 1px solid $gray;
+    display: flex;
+    height: $height;
+    width: 100%;
+
+    .menuIcon {
+        cursor: pointer;
+        width: 3em;
+
+        .row {
+            display: flex;
+            justify-content: center;
+            margin-top: 3px;
+           
+            &:first-of-type {
+                margin-top: 14px;
+            }
+
+            .square {
+                background-color: $dark-blue;
+                height: 5px;
+                margin-left: 3px;
+                width: 5px;
+
+                &:first-of-type {
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+
+    .content {
+        background-color: $blue;
+        color: white;
+        display: flex;
+        vertical-align: middle;
+        width: 100%;
+
+        .title {
+            padding: 0.4em 1em;
+
+            .app {
+                &__name {
+                    font-size: 1.75em;
+                    font-weight: 300;
+                    margin-right: 0.5em;
+                }
+    
+                &__title {
+                    text-transform: uppercase;
+                    font-size: 0.75em;
+                    letter-spacing: 0.05em;
+                }
+            }
+        }
+
+        .repository {
+            background-color: $dark-blue;
+            padding: 0.4em 1.5em 0 1.5em;
+
+            &__name {
+                font-size: 0.65em;
+                padding-bottom: 0.15em;
+            }
+
+            &__title {
+                font-weight: 600;
+                font-size: 0.95em;
+            }
+        }
+
+        .user {
+            align-items: center;
+            display: flex;
+            margin-left: auto;
+
+            &__image {
+                align-items: center;
+                border-radius: 50%;
+                justify-content: flex-end;
+                margin-right: 1em;
+                width: 2em;
+            }
+
+            &__name {
+                font-size: 0.8em;
+                margin-right: 1em;
+            }
+        }
+    }
+}

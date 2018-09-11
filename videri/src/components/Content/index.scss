@@ -1,0 +1,86 @@
+@import "../../globals";
+
+.Content {
+    width: 100%;
+
+    .header, .table {
+        padding: 2em;
+    }
+
+    .header {
+        display: flex;
+        padding: 2em 2em 0 2em;
+
+        .title {
+            color: black;
+            font-size: 1em;
+            font-weight: 800;
+            text-transform: uppercase;
+        }
+
+        .rightSide {
+            display: flex;
+            margin-left: auto;
+
+            img {
+                width: 40px;
+                height: 40px;
+                margin: 0 0.5em;
+            }
+
+            .dragDrop {
+                display: flex;
+
+                .text {
+                    width: 15em;
+
+                    &__top, &__bottom {
+                        color: $gray_dark;
+                        margin: 0;
+                    }
+                    &__top {
+                        font-size: 0.75em;
+                        font-weight: bold;
+                    }
+                    &__bottom {
+                        font-size: 0.65em;
+                    }
+                }
+            }
+
+            .search {
+                input {
+                    border: 1px solid $gray-medium;
+                    border-radius: 2.5em;
+                    height: 2.5em;
+                    padding-left: 1em;
+                    width: 20em;
+
+                    &:focus {
+                        outline-width: 0;
+                    }
+
+                    &:not(:focus) {
+                        background: url("../../assets/images/search@2x.png");
+                        background-color: white;
+                        background-position: 10px;
+                        background-repeat: no-repeat;
+                        background-size: 1.65em;
+                        border: 1px solid $gray;
+                    }
+                }
+            }
+        }
+    }
+
+    .noContent, .table {
+        padding: 2em;
+    }
+
+    .table {
+        display: grid;
+        grid-gap: 1vh;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr) );
+        transition: 0.4s;
+    }
+}
