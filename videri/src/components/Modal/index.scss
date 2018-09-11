@@ -1,0 +1,84 @@
+@import "../../globals";
+
+.Modal {
+    height: 100%;
+    position: fixed;
+    top: 0;
+    width: 100%;
+
+    .blur {
+        background-color: rgba(0, 0, 0, 0.8);
+        filter: blur(5px) grayscale(50%);
+        height: 100%;
+        position: absolute;
+        width: 100%;
+        z-index: 1;
+    }
+
+    .close {
+        position: fixed;
+        top: 2em;
+        right: 2em;
+        width: 2em;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    .content {
+        display: flex;
+        position: relative;
+        z-index: 2;
+
+        &:not(.media) {
+            height: 100%;
+            margin: 0 auto;
+            padding-top: 25%;
+            text-align: center;
+            width: 50%;
+        }
+
+        &.media {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .name {
+                color: white;
+                font-weight: bold;
+                padding: 1em 0;
+            }
+        }
+
+        .media {
+            padding-top: 7%;
+
+            .name {
+                color: white;
+                font-weight: bold;
+                padding: 1em 0;
+                text-align: center;
+            }
+        }
+
+        form {
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+    .newFolder {
+        display: flex;
+
+        input {
+            border: 1px solid $gray;
+            border-radius: 1.5em;
+            font-size: 1em;
+            height: 2em;
+            margin: 0 0.5em;
+            padding-left: 1em;
+            width: 15em;
+        }
+    }
+}

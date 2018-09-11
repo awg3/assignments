@@ -1,4 +1,7 @@
+@import "globals";
+
 .App {
+    background-color: $gray_very-light;
     font-family: 'Quicksand', sans-serif;
     height: 100vh;
 }
