@@ -26,6 +26,7 @@ export default class Login extends Component {
     handleSubmit = (event) => {
         event.preventDefault();
 
+        const { history } = this.props;
         const { email, password } = this.state;
 
         this.setState({ errors: {} });
@@ -37,7 +38,7 @@ export default class Login extends Component {
                 localStorage.setItem("user", JSON.stringify({ email, password }));
 
                 // Moving to Home on valid submit.
-                this.props.history.push("/home");
+                history.push("/");
             }, 1000);
         }
     }
