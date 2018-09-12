@@ -7,6 +7,10 @@ This project represents the content site for Videri, it is a routed React applic
 * `npm i` or `yarn add` to install dependencies.
 * `npm start` or `yarn start` to start the application.
 
+Once the application is up and running, you will see the Login page. In here you will need:
+1. An email address, it can be fake but in email format (example: test@gmail.com)
+2. Any password with this format will work: 10 characters minimum, at least one: upper/lowercase letter, number and symbol.
+
 Enjoy!
 
 ## Note:
