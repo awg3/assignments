@@ -1,0 +1,87 @@
+@import "./src/globals.scss";
+
+$elementHeight: 4em;
+
+.SelectBar {
+    text-align: center;
+    margin-bottom: 2em;
+    position: relative;
+    width: 100%;
+
+    .title {
+        font-size: 1.5em;
+        font-weight: bold;
+        margin-bottom: 2em;
+    }
+
+    .crud {
+        padding: 0.5em 1em;
+        position: absolute;
+        top: 2em;
+        width: 100%;
+
+        >div {
+            border: 1px solid $gray;
+            cursor: pointer;
+            position: absolute;
+            width: 4em;
+
+            &:hover {
+                background-color: black;
+                color: white;
+                font-weight: bold;
+            }
+        }
+
+        &__add {
+            left: 0.25em;
+        }
+
+        &__delete {
+            right: 2.5em;
+        }
+
+        &__edit {
+            right: 7em;
+        }
+    }
+
+    .navigation {
+        align-items: center;
+        border: 1px solid $gray;
+        box-shadow: 0 1px 6px rgba(57,73,76,.35);
+        display: flex;
+        height: $elementHeight;
+        justify-content: space-between;
+        margin: 0 0.25em;
+        
+        .element {
+            border-left: 1px solid $gray;
+            cursor: pointer;
+            font-weight: bold;
+            height: 100%;
+            line-height: $elementHeight;
+            width: 100%;
+
+            &:hover {
+                background-color: black;
+                color: white;
+            }
+
+            &:first-of-type {
+                border-left: 0;
+            }
+
+            .remove {
+                position: absolute;
+                top: 0.5em;
+                right: 0.5em;
+            }
+
+            &.selected {
+                background-color: $gray;
+                color: white;
+            }
+        }
+    }
+}

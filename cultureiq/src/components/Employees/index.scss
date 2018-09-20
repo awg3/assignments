@@ -1,0 +1,88 @@
+@import "./src/globals.scss";
+
+.Employees {
+    margin: 2em 0 1em 0;
+    padding: 0.25em;
+
+    .noResults {
+        color: black;
+        font-size: 1em;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .filterBy {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 2em;
+        width: 100%;
+        
+        input, .title {
+            color: black;
+            font-weight: bold;
+        }
+
+        .title {
+            line-height: 3em;
+            margin-right: 1em;
+        }
+
+        input {
+            height: 2em;
+            padding: 0.5em;
+
+            &:first-of-type {
+                margin-right: 1em;
+            }
+
+            &:hover, &:focus {
+                border-color: $gray;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .table {
+        display: grid;
+        grid-gap: 1vh;
+        grid-template-columns: repeat(auto-fit, minmax($cardWidth, 1fr));
+        justify-items: center;
+
+        .Card {
+            background-color: $gray;
+            box-shadow: 0 1px 6px rgba(57,73,76,.35);
+            color: white;
+            width: $cardWidth;
+
+            &:hover {
+                cursor: pointer;
+                background-color: black;
+            }
+
+            div {
+                padding: 0.25em;
+                text-align: center;
+            }
+
+            .name {
+                font-weight: bold;
+            }
+
+            .description {
+                padding-bottom: 0.75em;
+                padding-left: 0.75em;
+                padding-right: 0.75em;
+                text-align: justify;
+            }
+
+            img {
+                border: 2px solid $gray;
+                border-radius: 50%;
+                display: block;
+                height: 100px;
+                margin: 1em auto 0 auto;
+                width: 100px;
+            }
+        }
+    }
+}

@@ -1,0 +1,105 @@
+@import "./src/globals.scss";
+
+.Modal {
+    position: fixed;
+
+    .overlay {
+        background-color: black;
+        opacity: 0.8;
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        z-index: 1;
+    }
+    
+    .content {
+        color: white;
+        background-color: black;
+        left: 25%;
+        max-height: 100%;
+        max-width: 600px;
+        min-height: 400px;
+        min-width: 320px;
+        position: fixed;
+        top: 15%;
+        width: 100%;
+        z-index: 2;
+
+        .title {
+            color: white;
+            display: block;
+            font-size: 2em;
+            font-weight: bold;
+            margin-top: 1em;
+            text-align: center;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+
+            .inputField {
+                margin: 1em;
+                text-align: center;
+
+                input {
+                    border: none;
+                    border-radius: 0.65em;
+                    font-size: 1em;
+                    height: 2em;
+                    padding: 0.25em 1em;
+                    width: 30em;
+
+                    &:focus {
+                        outline: none;
+                        font-weight: bold;
+                    }
+                }
+
+                label {
+                    display: block;
+                    font-weight: bold;
+                    margin: 0 0 0.5em 2em;
+                    text-align: left;
+                }
+            }
+
+            .submit {
+                background-color: white;
+                border: none;
+                border-radius: 0.5em;
+                display: block;
+                font-weight: bold;
+                height: 2em;
+                margin: 2em auto;
+                width: 8em;
+
+                &:not(.disabled):hover {
+                    color: white;
+                    cursor: pointer;
+                    background-color: green;
+                }
+
+                .disabled {
+                    &:hover {
+                        cursor: not-allowed;
+                    }
+                }
+            }
+        }
+
+        .close {
+            right: 10px;
+            position: absolute;
+            text-transform: uppercase;
+            top: 10px;
+    
+            &:hover {
+                cursor: pointer;
+                font-weight: bold;
+            }
+        }
+    }
+}

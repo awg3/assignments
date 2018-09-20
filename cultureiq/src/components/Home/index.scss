@@ -1,0 +1,33 @@
+@import "./src/globals.scss";
+
+.Home {
+    position: relative;
+    
+    >.title {
+        font-size: 2em;
+        font-weight: bold;
+        padding: 0.5em 0.25em;
+    }
+
+    .addNewDemografic {
+        border: 1px solid $gray;
+        color: black;
+        font-size: 1em;
+        font-weight: bold;
+        margin: 2em 0 2em 0.5em;
+        padding: 1em;
+        width: 15em;
+
+        &:hover {
+            background-color: black;
+            color: white;
+            cursor: pointer;
+        }
+    }
+
+    input {
+        &:focus {
+            outline: none;
+        }
+    }
+}
